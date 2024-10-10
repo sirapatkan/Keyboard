@@ -95,7 +95,11 @@ export default {
         this.pictures = this.pictures.filter(p => p.id !== picture.id);
       }
     },
+    stripHtmlTags(value) {
+      return value.replace(/<\/?[^>]+(>|$)/g, "");
+    },
     async createKeyboard() {
+      this.keyboard.keyboardtype = this.stripHtmlTags(this.keyboard.keyboardtype);
       this.keyboard.pictures = JSON.stringify(this.pictures);
       try {
         await KeyboardsService.post(this.keyboard);
