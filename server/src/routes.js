@@ -1,5 +1,5 @@
 const UserController = require('./controllers/UserController');
-<<<<<<< HEAD
+
 const UserAuthenController = require('./controllers/UserAuthenController');
 const isAuthenController = require('./authen/isAuthenController');
 const KeyboardController = require('./controllers/KeyboardController'); // เปลี่ยน BlogController เป็น KeyboardController
@@ -60,13 +60,3 @@ module.exports = (app) => {
         }
     });
 };
-=======
-
-module.exports = (app) => {
-    app.get('/users',UserController.index);
-    app.get('/user/:userId',UserController.show);
-    app.post('/user',UserController.create);
-    app.put('/user/:userId',UserController.put);
-    app.delete('/user/:userId',UserController.remove);
-}
->>>>>>> 76469648f2680bb426e4a0b261136eb9b29f0d95

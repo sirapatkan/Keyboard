@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const Promise = require('bluebird')
 const bcrypt = Promise.promisifyAll(require('bcrypt-nodejs'))
 function hashPassword(user, options) {
@@ -37,16 +36,3 @@ module.exports = (sequelize, DataTypes) => {
 
     return User
 }
-=======
-module.exports = (sequelize, DataTypes) => {
-  const User = sequelize.define("User", {
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    name: DataTypes.STRING,
-    lastname: DataTypes.STRING,
-    status: DataTypes.STRING,
-    type: DataTypes.STRING,
-  });
-  return User
-};
->>>>>>> 76469648f2680bb426e4a0b261136eb9b29f0d95
