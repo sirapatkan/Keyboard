@@ -7,7 +7,6 @@ import UserCreate from '@/components/User/CreateUser'
 import UserShow from '@/components/User/ShowUser'
 import Login from '@/components/Login'
 
-import CommentIndex from '@/components/Comments/index' 
 
 import KeyboardIndex from '@/components/keyboards/index'
 import KeyboardCreate from '@/components/Keyboards/CreateKeyboard'
@@ -66,11 +65,7 @@ export default new Router({
       name: 'keyboard',
       component: KeyboardShow
     },
-    {
-      path: '/comments',
-      name: 'comments',
-      component: CommentIndex
-    },
+    
     {
       path: '/upload',
       name: 'upload',
