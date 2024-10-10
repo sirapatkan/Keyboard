@@ -41,7 +41,7 @@
         <div class="clearfix"></div>
       </div>
       <p><strong>Keyboard Type:</strong></p>
-      <vue-ckeditor v-model.lazy="keyboard.keyboardtype" :config="config"/>
+      <vue-ckeditor v-model.lazy="keyboard.keyboardtype" :config="config" />
       <p>Price: <input type="text" v-model="keyboard.price" /></p>
       <p>Status: <input type="text" v-model="keyboard.status" /></p>
       <p><button type="submit">Create Keyboard</button></p>
@@ -95,11 +95,7 @@ export default {
         this.pictures = this.pictures.filter(p => p.id !== picture.id);
       }
     },
-    stripHtmlTags(value) {
-      return value.replace(/<\/?[^>]+(>|$)/g, "");
-    },
     async createKeyboard() {
-      this.keyboard.keyboardtype = this.stripHtmlTags(this.keyboard.keyboardtype);
       this.keyboard.pictures = JSON.stringify(this.pictures);
       try {
         await KeyboardsService.post(this.keyboard);

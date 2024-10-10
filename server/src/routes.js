@@ -57,4 +57,5 @@ module.exports = (app) => {
                 error: 'An error has occurred trying to delete the file'
             });
         }
-    });};
+    });
+};
